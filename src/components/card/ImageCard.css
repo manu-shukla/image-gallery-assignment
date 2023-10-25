@@ -1,0 +1,36 @@
+.cardContainer{
+    width: auto;
+    margin: 10px 10px;
+    cursor: pointer;
+
+}
+.cardContent-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+
+}
+.like{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile-info{
+    margin-left: 10px;
+    display: flex;
+flex-direction: column;
+justify-content: center;
+
+
+}
+.profile-info h4{
+    margin: 0;
+    padding: 0;
+}

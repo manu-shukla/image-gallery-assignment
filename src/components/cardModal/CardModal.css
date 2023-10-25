@@ -1,0 +1,29 @@
+.cardContainer{
+    width: auto;
+    margin: 10px 10px;
+    cursor: default;
+}
+.modal-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-container{
+    display: flex;
+    margin-top: 3px ;
+}
+.socialIcons{
+    padding-right: 2px;
+    cursor: pointer;
+}
+.icons-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 5px;
+}
+.description-container{
+
+
+}
