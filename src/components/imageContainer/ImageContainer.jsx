@@ -9,6 +9,7 @@ import {LoadingButton} from "@mui/lab";
 import CardModal from "../cardModal/CardModal";
 import {useThemeContext} from "../../contexts/themeContext";
 
+const API_KEY = "G4Jv18DpdFGw2tevJTOs4cySjk83oYzJJJh713EC9Q8";
 const ImageContainer = ({search}) => {
 
     const [data, setData] = useState([]);
@@ -18,12 +19,13 @@ const ImageContainer = ({search}) => {
     const [open, setOpen] = useState(false);
     const [spinner, setSpinner] = useState(false);
 
+
     useEffect(() => {
         console.log(selectedImage);
     }, [selectedImage]);
 
     const fetchImages = (signal = null) => {
-        fetch(`https://api.unsplash.com/search/photos?query=${search}&page=${page}&client_id=${process.env.REACT_APP_API_KEY}`, {signal: signal})
+        fetch(`https://api.unsplash.com/search/photos?query=${search}&page=${page}&client_id=${API_KEY}`, {signal: signal})
             .then(res => res.json())
             .then(data => {
                 console.log(Symbol.iterator in Object(data.results));
