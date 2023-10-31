@@ -26,8 +26,12 @@ const ImageContainer = ({search}) => {
         fetch(`https://api.unsplash.com/search/photos?query=${search}&page=${page}&client_id=${process.env.REACT_APP_API_KEY}`, {signal: signal})
             .then(res => res.json())
             .then(data => {
-                setData(prevState => [...prevState, ...data.results]);
-                setPage(prevState => prevState + 1);
+                console.log(Symbol.iterator in Object(data.results));
+                if(Symbol.iterator in Object(data.results))
+                {
+                    setData(prevState => [...prevState, ...data.results]);
+                    setPage(prevState => prevState + 1);
+                }
                 setSpinner(false);
             })
             .catch(err => {
